@@ -377,13 +377,14 @@ p:last-child {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--color-primary);
-  z-index: 100;
+  z-index: 1001;
   padding: var(--spacing-xl);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -442,7 +443,7 @@ p:last-child {
   gap: 5px;
   padding: 8px;
   position: relative;
-  z-index: 101;
+  z-index: 1002;
 }
 
 .nav-toggle-bar {
@@ -470,6 +471,7 @@ p:last-child {
 .nav.is-open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* When nav is open, change toggle color to white */
@@ -512,10 +514,13 @@ p:last-child {
   .nav {
     display: block;
     position: static;
+    width: auto;
+    height: auto;
     background-color: transparent;
     padding: 0;
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transition: none;
   }
 
