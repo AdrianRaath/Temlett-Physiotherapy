@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/user/.claude/projects/c--Users-user-Desktop-Temlett-Physiotherapy/memory/**)"
+    ]
+  }
+}
